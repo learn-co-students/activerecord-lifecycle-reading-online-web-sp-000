@@ -6,7 +6,7 @@
 
 ## Callbacks
 
-Now that you are integrating `ActiveRecord` into Rails, we must should note that
+Now that you are integrating `ActiveRecord` into Rails, we should note that
 we can make bits of code run whenever something happens in our model: like when
 it's created (but not yet saved to the database), saved to the database, or
 even deleted.  Everything we cover here is called "Active Record Lifecycle
