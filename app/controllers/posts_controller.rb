@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  #comment
 	def index
 		@posts = Post.all
 	end
