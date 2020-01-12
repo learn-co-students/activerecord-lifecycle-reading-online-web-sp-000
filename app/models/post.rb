@@ -1,7 +1,14 @@
 class Post < ActiveRecord::Base
 
   belongs_to :author
-  validate :is_title_case 
+  validate :is_title_case
+
+  before_validation :make_title_case
+
+  # New Code!!
+  # before_save :email_author_about_post
+
+  before_create :post_status
 
   private
 
@@ -14,4 +21,18 @@ class Post < ActiveRecord::Base
   def make_title_case
     self.title = self.title.titlecase
   end
+
+  def email_author_before_post
+    # Not implemented
+    # For more information: https://guides.rubyonrails.org/action_mailer_basics.html
+  end
+
+  def post_status?
+    if self.post_status? == false
+      errors.add(:post_status, "post_staus must be true")
+    end
+  end
+
+
+
 end
