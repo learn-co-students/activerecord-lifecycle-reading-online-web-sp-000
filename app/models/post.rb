@@ -5,7 +5,7 @@ class Post < ActiveRecord::Base
  
   before_validation :make_title_case
  
-  # New Code!!
+
   before_save :email_author_about_post
  
   private
@@ -17,8 +17,7 @@ class Post < ActiveRecord::Base
   end
  
   def email_author_about_post
-    # Not implemented.
-    # For more information: https://guides.rubyonrails.org/action_mailer_basics.html
+    
   end
  
   def make_title_case
